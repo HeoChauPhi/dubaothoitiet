@@ -1,0 +1,31 @@
+{% set listRss = [
+  {
+    'listRss_title' : 'Press realases - English',
+  },
+  {
+    'listRss_title' : 'financial reports - English',
+  },
+  {
+    'listRss_title' : 'financial reports - English',
+  },
+  {
+    'listRss_title' : 'Press realases - English',
+  },
+  {
+    'listRss_title' : 'Press realases - English',
+  },
+  {
+    'listRss_title' : 'Press realases - English',
+  }
+  ]
+%}
+<div class="box-rss">
+  <div class="box-rss__title">RSS</div>
+  <div class="box-rss__list">
+    {% for item in listRss %}
+    <div class="box-rss__item">
+      <div class="box-rss__item__title"><a href="">{{ item.listRss_title }}</a></div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

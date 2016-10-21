@@ -1,0 +1,89 @@
+{% set sectionTitle = 'Who We Are' %}
+{% set sectionDescription = 'Catena Media is one of the leading players in the business of generating quality leads and high-value traffic to online partners all over the world.' %}
+{% set box_intro_link = 'Find out more' %}
+{% set box_intro = [
+    {
+      'box_intro_image' : '../images/icon-mission.png',
+      'box_intro_title' : 'Mission',
+      'box_intro_content' : 'Catena Media will publish its interim report for the second quarter 2016 on Thursday 25 August'
+    },
+    {
+      'box_intro_image' : '../images/icon-vision.png',
+      'box_intro_title' : 'Vision',
+      'box_intro_content' : 'Catena Media will publish its interim report for the second quarter 2016 on Thursday 25 August'
+    },
+    {
+      'box_intro_image' : '../images/icon-growth.png',
+      'box_intro_title' : 'Growth Strategy',
+      'box_intro_content' : 'Catena Media will publish its interim report for the second quarter 2016 on Thursday 25 August'
+    }
+  ]
+%}
+
+{% block boxIntro %}
+  <div class="box-intro">
+    <div class="container-wide">
+      {% if sectionTitle is not empty %}<h2 class="section-title has-description">{{ sectionTitle }}</h2>{% endif %}
+      {% if sectionDescription is not empty %}<div class="section-description">{{ sectionDescription }}</div>{% endif %}
+      <div class="box-intro__list">
+      {% for item in box_intro %}
+        <div class="box-intro__item">
+          <div class="box-intro__image"><img src="{{ item.box_intro_image}}"></div>
+          <div class="box-intro__title">{{ item.box_intro_title }}</div>
+          {% if item.box_intro_content is not empty %}
+            <div class="box-intro__content">{{ item.box_intro_content }}</div>
+          {% endif %}
+        </div>
+      {% endfor %}
+      </div>
+      {% if box_intro_link is not empty %}
+        <div class="box-intro__link center"><a class="btn" href="#">{{box_intro_link}}</a></div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}
+
+{% set sectionTitle = '' %}
+{% set sectionDescription = 'Find out what the company has been up to and what we have planned for the future. See what our teams have been doing and celebrate our successes with us.' %}
+{% set box_intro_link = '' %}
+{% set box_intro = [
+    {
+      'box_intro_image' : '../images/Malta-icon.png',
+      'box_intro_title' : 'Sliema, Malta',
+      'box_intro_content' : ''
+    },
+    {
+      'box_intro_image' : '../images/london.png',
+      'box_intro_title' : 'London, UK',
+      'box_intro_content' : ''
+    },
+    {
+      'box_intro_image' : '../images/belgrade-icon.png',
+      'box_intro_title' : 'Belgrade, Serbia',
+      'box_intro_content' : ''
+    }
+  ]
+%}
+
+{% block boxIntro %}
+  <div class="box-intro box-intro--medium">
+    <div class="container-wide">
+      {% if sectionTitle is not empty %}<h2 class="section-title has-description">{{ sectionTitle }}</h2>{% endif %}
+      {% if sectionDescription is not empty %}<div class="section-description">{{ sectionDescription }}</div>{% endif %}
+      <div class="box-intro__list">
+      {% for item in box_intro %}
+        <div class="box-intro__item">
+          <div class="box-intro__image"><img src="{{ item.box_intro_image}}"></div>
+          <div class="box-intro__title">{{ item.box_intro_title }}</div>
+          {% if item.box_intro_content is not empty %}
+            <div class="box-intro__content">{{ item.box_intro_content }}</div>
+          {% endif %}
+        </div>
+      {% endfor %}
+      </div>
+      {% if box_intro_link is not empty %}
+        <div class="box-intro__link center"><a class="btn" href="#">{{box_intro_link}}</a></div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

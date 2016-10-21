@@ -1,0 +1,54 @@
+{% extends '../layouts/layout.twig' %}
+{% block content %}
+  {% block sideContent %}
+    <main class="has-sidebar sidebar-left single-news">
+      <div class="container-wide">
+        <div class="sidebar-left">{% include '../components/menu-sidebar.twig' %}</div>
+        <div class="main-content">
+          <h1 id="page-title">{% block pageTitle %}Email marketing coordinator{% endblock %}</h1>
+          <div class="content__top">
+          <div class="group-news">
+            <div class="group-news__item news__post-date"><i class="icon-clock"></i>August 17th, 2016 </div>
+            <div class="group-news__item news__category"><a href="#">Financial News</a></div>
+            <div class="group-news__item news__share-this">
+              {% set block_social_class = 'block-social--circle' %}
+              {% set blockSocial = [
+                  {
+                    'block_social_icon' : 'icon-linkedin'
+                  },
+                  {
+                    'block_social_icon' : 'icon-facebook'
+                  },
+                  {
+                    'block_social_icon' : 'icon-twitter'
+                  }
+                ]
+              %}
+              {% include '../components/social.twig' %}
+            </div>
+          </div>
+          <div class="news__image"><img src="../images/single-news.jpg"></div><!-- Image style 1060x400 -->
+          <h4>Why do we use it?</h4>
+          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+
+            <div class="news__link border-top">
+              <div class="teaser-detail__social">
+                <div class="teaser-detail__social__text js-social-download">dowload pdf</div>
+                <div class="teaser-detail__social__group">
+                  <div class="teaser-detail__social__excel"><a href="">Excel</a>
+                  </div>
+                  <div class="teaser-detail__social__pdf"><a href="">PDF</a>
+                  </div>
+                  <div class="teaser-detail__social__word"><a href="">Word</a>
+                  </div>
+                  <div class="teaser-detail__social__powerpoint"><a href="">PowerPoint</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  {% endblock %}
+{% endblock %}

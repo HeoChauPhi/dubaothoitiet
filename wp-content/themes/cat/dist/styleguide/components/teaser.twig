@@ -1,0 +1,105 @@
+{% set box_teaser = [
+    {
+      'box_teaser_category' : 'Company news',
+      'box_teaser_image' : '../images/news-1.png',
+      'box_teaser_title' : 'Invitation to Catena Media’s second quarter 2016',
+      'box_teaser_body' : 'Catena Media will publish its interim report for the second quarter 2016 on Thursday 25 August',
+      'box_teaser_post_date' : 'May 15th, 2016'
+    },
+    {
+      'box_teaser_category' : 'Company news',
+      'box_teaser_image' : '../images/news-2.png',
+      'box_teaser_title' : 'Invitation to Catena Media’s second quarter 2016 quarter 2016',
+      'box_teaser_body' : 'Catena Media will publish its interim report for the second quarter 2016 on Thursday 25 August',
+      'box_teaser_post_date' : 'May 15th, 2016'
+    },
+    {
+      'box_teaser_category' : 'Company news',
+      'box_teaser_image' : '../images/news-3.png',
+      'box_teaser_title' : 'Invitation to Catena Media’s second quarter 2016',
+      'box_teaser_body' : 'Catena Media will publish its interim report for the second quarter 2016 on Thursday 25 August',
+      'box_teaser_post_date' : 'May 15th, 2016'
+    }
+  ]
+%}
+
+{% block boxTeaser%}
+  <div class="teaser">
+    <div class="container-wide">
+      <h2 class="section-title">Latest News</h2>
+      <div class="teaser__list">
+        {% for item in box_teaser %}
+          <div class="teaser__item">
+            <div class="teaser__top">
+              <div class="teaser__category hide-all-device"><a href="#">{{ item.box_teaser_category }}</a></div>
+              <div class="teaser__image"><img src="{{ item.box_teaser_image }}" height="274" width="100%"></div>
+            </div>
+            <div class="teaser__bottom">
+              <div class="teaser__group hide-on-desktop">
+              <div class="teaser__category"><a href="#">{{ item.box_teaser_category }}</a></div>
+                <div class="teaser__post-date"><i class="icon-clock"></i>{{ item.box_teaser_post_date }}</div>
+              </div>
+              <h4 class="teaser__title"><a href="#">{{ item.box_teaser_title }}</a></h4>
+              <div class="teaser__body hide-on-mobile"><p>{{ item.box_teaser_body }}</p></div>
+              <div class="teaser__post-date hide-all-device"><i class="icon-clock"></i>{{ item.box_teaser_post_date }}</div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="teaser__link center"><a class="btn" href="#">More news</a></div>
+    </div>
+  </div>
+{% endblock %}
+
+{% set box_teaser = [
+    {
+      'box_teaser_category' : 'Company news',
+      'box_teaser_image' : '../images/news-1.png',
+      'box_teaser_title' : 'Invitation to Catena Media’s second quarter 2016',
+      'box_teaser_body' : 'Catena Media will publish its interim report for the second quarter 2016 on Thursday 25 August',
+      'box_teaser_post_date' : 'May 15th, 2016'
+    },
+    {
+      'box_teaser_category' : 'Company news',
+      'box_teaser_image' : '../images/news-2.png',
+      'box_teaser_title' : 'Invitation to Catena Media’s second quarter 2016 quarter 2016',
+      'box_teaser_body' : 'Catena Media will publish its interim report for the second quarter 2016 on Thursday 25 August',
+      'box_teaser_post_date' : 'May 15th, 2016'
+    },
+    {
+      'box_teaser_category' : 'Company news',
+      'box_teaser_image' : '../images/news-3.png',
+      'box_teaser_title' : 'Invitation to Catena Media’s second quarter 2016',
+      'box_teaser_body' : 'Catena Media will publish its interim report for the second quarter 2016 on Thursday 25 August',
+      'box_teaser_post_date' : 'May 15th, 2016'
+    }
+  ]
+%}
+
+{% block boxTeaser%}
+  <div class="teaser teaser--2col">
+    <div class="container-wide">
+      <h2 class="section-title">Latest News</h2>
+      <div class="teaser__list">
+        {% for item in box_teaser %}
+          <div class="teaser__item">
+            <div class="teaser__top">
+              <div class="teaser__category hide-all-device"><a href="#">{{ item.box_teaser_category }}</a></div>
+              <div class="teaser__image"><img src="{{ item.box_teaser_image }}" height="274" width="100%"></div>
+            </div>
+            <div class="teaser__bottom">
+              <div class="teaser__group hide-on-desktop">
+              <div class="teaser__category"><a href="#">{{ item.box_teaser_category }}</a></div>
+                <div class="teaser__post-date"><i class="icon-clock"></i>{{ item.box_teaser_post_date }}</div>
+              </div>
+              <h4 class="teaser__title"><a href="#">{{ item.box_teaser_title }}</a></h4>
+              <div class="teaser__body hide-on-mobile"><p>{{ item.box_teaser_body }}</p></div>
+              <div class="teaser__post-date hide-all-device"><i class="icon-clock"></i>{{ item.box_teaser_post_date }}</div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="teaser__link center"><a class="btn" href="#">More news</a></div>
+    </div>
+  </div>
+{% endblock %}

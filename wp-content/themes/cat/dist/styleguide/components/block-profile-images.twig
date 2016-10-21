@@ -1,0 +1,34 @@
+
+{% set profile_content = [
+    {
+      'profile_content_image' : '../images/images-demo/profile1.jpg',
+      'profile_content_title' : 'Rovert Andersson',
+      'profile_content_position' : 'Chief Executive Offcer (CEO)',
+      'profile_content_email' : 'robert@catenamedia.com',
+      'profile_content_phone' : '+35677032928'
+    }
+    ,{
+      'profile_content_image' : '../images/images-demo/profile2.jpg',
+      'profile_content_title' : 'Patrik Bloch',
+      'profile_content_position' : 'Chief Financial  Offcer (CFO)',
+      'profile_content_email' : 'patrik@catenamedia.com',
+      'profile_content_phone' : '+35677032928'
+    }
+  ]
+%}
+
+<div class="block-profile">
+  <div class="container-wide">
+    <div class="block-profile__list">
+      {% for item in profile_content %}
+      <div class="block-profile__item">
+        <div class="block-profile__image"><img src="{{ item.profile_content_image}}"></div>
+        <h3 class="block-profile__title">{{ item.profile_content_title }}</h3>
+        <div class="block-profile__position">{{ item.profile_content_position }}</div>
+        <div class="block-profile__email">{{ item.profile_content_email }}</div>
+        <div class="block-profile__phonenumber">{{ item.profile_content_phone }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

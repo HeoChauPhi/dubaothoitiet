@@ -1,0 +1,131 @@
+{% set content_top = 'This content top full' %}
+{% set content_2col_left = 'This content left (Content two columns)' %}
+{% set content_2col_right = 'This content right (Content two columns)' %}
+{% set content_bottom = 'This content bottom full' %}
+{% set page_description = 'Page description' %}
+
+{% block sideContent %}
+  <main class="has-sidebar sidebar-left">
+    <div class="container-wide">
+      <div class="sidebar-left"><div class="sidebar-left__inner">{% include 'menu-sidebar.twig' %}</div></div>
+      <div class="main-content">
+        <div class="info-page">
+          <h1 id="page-title">Page container layout, has sidebar</h1>
+          {% if page_description is not empty %}
+            <div class="page-description">{{ page_description }}</div>
+          {% endif %}
+        </div>
+
+        {% if content_top is not empty %}
+          <div class="content__top">{{ content_top }}</div>
+        {% endif %}
+
+        {% if content_2col_left and content_2col_right is not empty %}
+          <div class="content__2col">
+            <div class="content__2col__left">{{ content_2col_left }}</div>
+            <div class="content__2col__right">{{ content_2col_right }}</div>
+          </div>
+        {% endif %}
+
+        {% if content_bottom is not empty %}
+          <div class="content__bottom">{{ content_bottom }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </main>
+{% endblock %}
+
+{% block sideContent %}
+  <main>
+    <div class="container-wide">
+      <div class="main-content">
+        <div class="info-page">
+          <h1 id="page-title">Page container layout, no sidebar</h1>
+          {% if page_description is not empty %}
+            <div class="page-description">{{ page_description }}</div>
+          {% endif %}
+        </div>
+
+        {% if content_top is not empty %}
+          <div class="content__top">{{ content_top }}</div>
+        {% endif %}
+
+        {% if content_2col_left and content_2col_right is not empty %}
+          <div class="content__2col">
+            <div class="content__2col__left">{{ content_2col_left }}</div>
+            <div class="content__2col__right">{{ content_2col_right }}</div>
+          </div>
+        {% endif %}
+
+        {% if content_bottom is not empty %}
+          <div class="content__bottom">{{ content_bottom }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </main>
+{% endblock %}
+
+{% block sideContent %}
+  <main class="has-sidebar">
+    <div class="full">
+      <div class="sidebar-left">
+        <div class="sidebar-left__inner">
+          {% include 'menu-sidebar.twig' %}
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="info-page">
+          <h1 id="page-title">Page full layout, has sidebar</h1>
+          {% if page_description is not empty %}
+            <div class="page-description">{{ page_description }}</div>
+          {% endif %}
+        </div>
+
+        {% if content_top is not empty %}
+          <div class="content__top">{{ content_top }}</div>
+        {% endif %}
+
+        {% if content_2col_left and content_2col_right is not empty %}
+          <div class="content__2col">
+            <div class="content__2col__left">{{ content_2col_left }}</div>
+            <div class="content__2col__right">{{ content_2col_right }}</div>
+          </div>
+        {% endif %}
+
+        {% if content_bottom is not empty %}
+          <div class="content__bottom">{{ content_bottom }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </main>
+{% endblock %}
+
+{% block sideContent %}
+  <main>
+    <div class="full">
+      <div class="main-content">
+        <div class="info-page">
+          <h1 id="page-title">Page full layout, no sidebar</h1>
+          {% if page_description is not empty %}
+            <div class="page-description">{{ page_description }}</div>
+          {% endif %}
+        </div>
+
+        {% if content_top is not empty %}
+          <div class="content__top">{{ content_top }}</div>
+        {% endif %}
+
+        {% if content_2col_left and content_2col_right is not empty %}
+          <div class="content__2col">
+            <div class="content__2col__left">{{ content_2col_left }}</div>
+            <div class="content__2col__right">{{ content_2col_right }}</div>
+          </div>
+        {% endif %}
+
+        {% if content_bottom is not empty %}
+          <div class="content__bottom">{{ content_bottom }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </main>
+{% endblock %}

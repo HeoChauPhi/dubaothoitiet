@@ -1,0 +1,71 @@
+{% set grid_column_class = 'grid-2col' %}
+{% set grid_column = [
+    {
+      'grid_column_content' : 'Nulla et lacus vitae dui faucibus posuere vel in est. Curabitur ut ullamcorper tortor. Vivamus sagittis nibh vitae enim varius, ac porttitor metus rutrum. Pellentesque pharetra lorem iaculis risus blandit, et lacinia magna iaculis? Sed mattis quam quam.'
+    },
+    {
+      'grid_column_content' : 'Nulla et lacus vitae dui faucibus posuere vel in est. Curabitur ut ullamcorper tortor. Vivamus sagittis nibh vitae enim varius, ac porttitor metus rutrum. Pellentesque pharetra lorem iaculis risus blandit, et lacinia magna iaculis? Sed mattis quam quam.'
+    }
+  ]
+%}
+{% block gridColumns %}
+  <div class="container-wide">
+    <h2 class="center">Two Columns</h2>
+    <div class="grid-column {{ grid_column_class }}">
+      {% for item in grid_column %}
+        <div class="grid-column__item">{{ item.grid_column_content }}</div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
+
+{% set grid_column_class = 'grid-3col' %}
+{% set grid_column = [
+    {
+      'grid_column_content' : 'Nulla et lacus vitae dui faucibus posuere vel in est. Curabitur ut ullamcorper tortor. Vivamus sagittis nibh vitae enim varius, ac porttitor metus rutrum. Pellentesque pharetra lorem iaculis risus blandit, et lacinia magna iaculis? Sed mattis quam quam.'
+    },
+    {
+      'grid_column_content' : 'Nulla et lacus vitae dui faucibus posuere vel in est. Curabitur ut ullamcorper tortor. Vivamus sagittis nibh vitae enim varius, ac porttitor metus rutrum. Pellentesque pharetra lorem iaculis risus blandit, et lacinia magna iaculis? Sed mattis quam quam.'
+    },
+    {
+      'grid_column_content' : 'Nulla et lacus vitae dui faucibus posuere vel in est. Curabitur ut ullamcorper tortor. Vivamus sagittis nibh vitae enim varius, ac porttitor metus rutrum. Pellentesque pharetra lorem iaculis risus blandit, et lacinia magna iaculis? Sed mattis quam quam.'
+    }
+  ]
+%}
+{% block gridColumns %}
+  <div class="container-wide">
+    <h2 class="center">Three Columns</h2>
+    <div class="grid-column {{ grid_column_class }}">
+      {% for item in grid_column %}
+        <div class="grid-column__item">{{ item.grid_column_content }}</div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
+
+{% set grid_column_class = 'grid-4col' %}
+{% set grid_column = [
+    {
+      'grid_column_content' : 'Nulla et lacus vitae dui faucibus posuere vel in est. Curabitur ut ullamcorper tortor. Vivamus sagittis nibh vitae enim varius, ac porttitor metus rutrum. Pellentesque pharetra lorem iaculis risus blandit, et lacinia magna iaculis? Sed mattis quam quam.'
+    },
+    {
+      'grid_column_content' : 'Nulla et lacus vitae dui faucibus posuere vel in est. Curabitur ut ullamcorper tortor. Vivamus sagittis nibh vitae enim varius, ac porttitor metus rutrum. Pellentesque pharetra lorem iaculis risus blandit, et lacinia magna iaculis? Sed mattis quam quam.'
+    },
+    {
+      'grid_column_content' : 'Nulla et lacus vitae dui faucibus posuere vel in est. Curabitur ut ullamcorper tortor. Vivamus sagittis nibh vitae enim varius, ac porttitor metus rutrum. Pellentesque pharetra lorem iaculis risus blandit, et lacinia magna iaculis? Sed mattis quam quam.'
+    },
+    {
+      'grid_column_content' : 'Nulla et lacus vitae dui faucibus posuere vel in est. Curabitur ut ullamcorper tortor. Vivamus sagittis nibh vitae enim varius, ac porttitor metus rutrum. Pellentesque pharetra lorem iaculis risus blandit, et lacinia magna iaculis? Sed mattis quam quam.'
+    }
+  ]
+%}
+{% block gridColumns %}
+  <div class="container-wide">
+    <h2 class="center">Four Columns</h2>
+    <div class="grid-column {{ grid_column_class }}">
+      {% for item in grid_column %}
+        <div class="grid-column__item">{{ item.grid_column_content }}</div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

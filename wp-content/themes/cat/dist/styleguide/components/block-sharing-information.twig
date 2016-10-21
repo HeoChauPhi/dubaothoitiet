@@ -1,0 +1,126 @@
+{% set block_sharing_info_class = 'bg--gradient-red white' %}
+{% set block_sharing = [
+    {
+      'block_sharing_title' : 'Last updated',
+      'block_sharing_number' : '-1.56%'
+    },
+    {
+      'block_sharing_title' : 'ask',
+      'block_sharing_number' : '64.25'
+    },
+    {
+      'block_sharing_title' : 'bid',
+      'block_sharing_number' : '63'
+    },
+    {
+      'block_sharing_title' : 'high',
+      'block_sharing_number' : '65'
+    },
+    {
+      'block_sharing_title' : 'low',
+      'block_sharing_number' : '62'
+    },
+    {
+      'block_sharing_title' : 'Volume',
+      'block_sharing_number' : '16926'
+    },
+    {
+      'block_sharing_title' : 'Turnover',
+      'block_sharing_number' : '1076154.25'
+    },
+    {
+      'block_sharing_title' : 'Total market cap',
+      'block_sharing_number' : '3241 M SEK'
+    }
+  ]
+%}
+
+{% block sharingInformation %}
+  <div class="container-wide">
+    <div class="block-sharing-info {{ block_sharing_info_class }}" style="margin-bottom: 30px;">
+      <div class="block-sharing-info__inner">
+        <div class="block-sharing-info__left">
+          <div class="block-sharing-info__left__inner">
+            <div class="block-sharing-info__title">Catena Media (CTM)</div>
+            <div class="block-sharing-info__number">63.25<sup>SEK</sup></div>
+          </div>
+        </div>
+        <div class="block-sharing-info__right">
+          <div class="block-sharing-info__list">
+            {% for item in block_sharing %}
+              <div class="block-sharing-info__item">
+                <div class="block-sharing-info__item__title">{{ item.block_sharing_title }}</div>
+                <div class="block-sharing-info__item__number">{{ item.block_sharing_number }}</div>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="block-sharing-info__post-date"><span>August 2nd, 17:29</span><span>15 minute delayed data</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+
+{% set block_sharing_info_class = 'block-sharing-info--full bg--gradient-red white' %}
+{% set block_sharing = [
+    {
+      'block_sharing_title' : 'Last updated',
+      'block_sharing_number' : '-1.56%'
+    },
+    {
+      'block_sharing_title' : 'ask',
+      'block_sharing_number' : '64.25'
+    },
+    {
+      'block_sharing_title' : 'bid',
+      'block_sharing_number' : '63'
+    },
+    {
+      'block_sharing_title' : 'high',
+      'block_sharing_number' : '65'
+    },
+    {
+      'block_sharing_title' : 'low',
+      'block_sharing_number' : '62'
+    },
+    {
+      'block_sharing_title' : 'Volume',
+      'block_sharing_number' : '16926'
+    },
+    {
+      'block_sharing_title' : 'Turnover',
+      'block_sharing_number' : '1076154.25'
+    },
+    {
+      'block_sharing_title' : 'Total market cap',
+      'block_sharing_number' : '3241 M SEK'
+    }
+  ]
+%}
+
+{% block sharingInformation %}
+  <div class="block-sharing-info {{ block_sharing_info_class }}">
+    <div class="container-wide">
+      <div class="block-sharing-info__inner">
+        <div class="block-sharing-info__left">
+          <div class="block-sharing-info__left__inner">
+            <div class="block-sharing-info__title">Catena Media (CTM)</div>
+            <div class="block-sharing-info__number">63.25<sup>SEK</sup></div>
+          </div>
+        </div>
+        <div class="block-sharing-info__right">
+          <div class="block-sharing-info__list">
+            {% for item in block_sharing %}
+              <div class="block-sharing-info__item">
+                <div class="block-sharing-info__item__title">{{ item.block_sharing_title }}</div>
+                <div class="block-sharing-info__item__number">{{ item.block_sharing_number }}</div>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="block-sharing-info__post-date"><span>August 2nd, 17:29</span><span>15 minute delayed data</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

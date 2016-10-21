@@ -1,0 +1,20 @@
+{% block header %}
+  <header class="header clearfix bg--gradient-red" id="header">
+    <div class="container-wide">
+      <div class="header__logo">
+        <a href="index.html"><img src="../images/logo.png" width="224" height="35" alt="Catena"></a>
+      </div>
+      <div id="header-navigation" class="header__navigation">
+        <div class="js-toggle-menu responsive-icon-menu"></div>
+        {% include 'navigation.twig' %}
+        <div class="languages-select">
+          <div class="languages-select__text js-toggle-languages">English</div>
+          <ul class="languages-select__list">
+            <li class="languages-select__item "><a data-value="en_US" href="#">English</a></li>
+            <li class="languages-select__item active"><a data-value="sv_SE" href="#">Svenska</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+{% endblock %}

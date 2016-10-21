@@ -1,0 +1,115 @@
+{% set logo1 = [
+  {
+    'logo' : 'logo-partner1.png'
+  },
+  {
+    'logo' : 'logo-partner2.png'
+  },
+  {
+    'logo' : 'logo-partner3.png'
+  },
+  {
+    'logo' : 'logo-partner4.png'
+  }
+]
+%}
+
+{% set logo2 = [
+  {
+    'logo' : 'logo-partner5.png'
+  },
+  {
+    'logo' : 'logo-partner6.png'
+  },
+  {
+    'logo' : 'logo-partner7.png'
+  }
+]
+%}
+
+{% block blockStrategy %}
+  <div class="block-strategy bg--grey">
+    <div class="block-strategy__header bg--gradient-red">
+      <h3 class="block-strategy__title">A multi brand strategy with a driverse portfolio</h3>
+    </div>
+    <div class="block-strategy__content">
+      <div class="block-strategy__content-top">
+        <div class="block-strategy--left">
+        <h4>Value for potential players</h4>
+          <ul class="list list--icon">
+            <li><i class="icon-check_circle"></i>Access to special Catena Media unique offers</li>
+            <li><i class="icon-check_circle"></i>Up to date game guides and reviews</li>
+            <li><i class="icon-check_circle"></i>Helps players find the right casino - over 300 iGaming brands per Q4 2015</li>
+          </ul>
+        </div>
+        <div class="block-strategy--right">
+          <h4>Value for customers</h4>
+          <ul class="list list--icon">
+            <li><i class="icon-check_circle"></i>Access to special Catena Media unique offers</li>
+            <li><i class="icon-check_circle"></i>Up to date game guides and reviews</li>
+            <li><i class="icon-check_circle"></i>Helps players find the right casino - over 300 iGaming brands per Q4 2015</li>
+          </ul>
+        </div>
+      </div>
+      <div class="block-strategy__content-bottom">
+        <div class="block-strategy--left bg--darken-gray js--strategy__item">
+          <h4>Value for customers</h4>
+          <ul class="list-value">
+            <li>SEO</li>
+            <li>Mainly revenue share</li>
+            <li>Email</li>
+            <li>User created content</li>
+          </ul>
+          <ul class="list--image">
+            <li>
+              <div class="block-strategy__img">
+                <img src="{{ img_path }}logo-product1.png" alt="Catena">
+              </div>
+              <p>Helps players find the right casino - over 300 iGaming brands per Q4 2015</p>
+            </li>
+            <li>
+              <div class="block-strategy__img">
+                <img src="{{ img_path }}logo-product2.png" alt="Catena">
+              </div>
+              <p>Helps players find the right casino - over 300 iGaming brands per Q4 2015</p>
+            </li>
+          </ul>
+        </div>
+        <div class="block-strategy--right bg--lighter-gray js--strategy__item">
+          <h4>Value for customers</h4>
+          <ul class="list-value">
+            <li>SEO</li>
+            <li>Email</li>
+            <li>Mainly revenue share</li>
+          </ul>
+          <ul class="list--image">
+            <li>
+            <div class="block-strategy__img">
+              <img src="{{ img_path }}logo-product3.png" alt="Catena">
+            </div>
+              <p>Helps players find the right casino - over 300 iGaming brands per Q4 2015</p>
+            </li>
+            <li>
+              <div class="block-strategy__img">
+                <img src="{{ img_path }}logo-product4.png" alt="Catena">
+              </div>
+              <p>Helps players find the right casino - over 300 iGaming brands per Q4 2015</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="block-strategy__footer">
+      <ul class="block-strategy___logo-row">
+        {% for item in logo1 %}
+          <li><img src="{{ img_path }}{{ item.logo }}"></li>
+        {% endfor %}
+      </ul>
+      <ul class="block-strategy___logo-row">
+        {% for item in logo2 %}
+          <li><img src="{{ img_path }}{{ item.logo }}"></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock %}

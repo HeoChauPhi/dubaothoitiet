@@ -1,0 +1,28 @@
+{% extends '../layouts/layout.twig' %}
+{% block content %}
+  {% block sideContent %}
+    <main class="has-sidebar sidebar-left job-detail-page">
+      <div class="container-wide">
+        <div class="sidebar-left">{% include '../components/menu-sidebar.twig' %}</div>
+        <div class="main-content">
+          <div class="info-page">
+            <div class="info-page__left">
+              <h1 id="page-title">{% block pageTitle %}Email marketing coordinator{% endblock %}</h1>
+              <div class="group-info-job">
+                <div class="info-job__item info-job__category"><a href="#">Marketing and sales</a></div>
+                <div class="info-job__item info-job__location">Sliema, Malta</div>
+              </div>
+            </div>
+            <div class="info-page__right"><a class="btn btn--small" href="#">Apply for a job</a></div>
+          </div>
+          <div class="content__top">
+          <h4>Why do we use it?</h4>
+          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p></div>
+          <div class="content__bottom">
+            <div class="group-job__link border-top"><a class="btn btn--small" href="#">Apply for a job</a><a href="#" id="careers" class="back-link">see all open positions</a></div>
+          </div>
+      </div>
+      </div>
+    </main>
+  {% endblock %}
+{% endblock %}
