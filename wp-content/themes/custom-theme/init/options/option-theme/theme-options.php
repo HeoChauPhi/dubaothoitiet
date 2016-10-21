@@ -18,16 +18,29 @@ function theme_settings_page() { ?>
 function add_theme_menu_item() {
   add_submenu_page(
     "themes.php",
-    "Theme Settings", 
-    "Theme Settings", 
-    "manage_options", 
-    "theme-panel", 
-    "theme_settings_page", 
-    null, 
+    "Theme Settings",
+    "Theme Settings",
+    "manage_options",
+    "theme-panel",
+    "theme_settings_page",
+    null,
     99
   );
 }
 add_action("admin_menu", "add_theme_menu_item");
+
+// Display in dasboard
+function display_theme_panel_fields() {
+  // Add Section
+  add_settings_section("theme-setting", "Theme Setting", null, "theme-options");
+
+  // Display Fields
+  add_settings_field("text_field", "Text field", "display_text_element", "theme-options", "theme-setting");
+
+  // Register setting
+  register_setting("theme-setting", "text_field");
+}
+add_action("admin_init", "display_theme_panel_fields");
 
 /*
  *
@@ -44,15 +57,3 @@ function display_text_element() { ?>
 }
 
 // Upload Field
-
-// Display in dasboard
-function display_theme_panel_fields() {
-  add_settings_section("section", "All Settings", null, "theme-options");
-
-  // Display Fields
-  add_settings_field("text_field", "Text field", "display_text_element", "theme-options", "section");
-
-  // Register setting
-  register_setting("section", "text_field");
-}
-add_action("admin_init", "display_theme_panel_fields");
