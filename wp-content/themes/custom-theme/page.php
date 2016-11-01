@@ -37,7 +37,9 @@ $context['sidebar_menu'] = $sidebar_menu;
 //$context['menu_select'] = new TimberMenu($menu_obj->term_id);
 
 $facebook = get_option('text_field');
+$upload = get_option('upload_field');
 echo $facebook;
+echo $upload;
 
 
 Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig'), $context );
