@@ -2,7 +2,7 @@
 /*global $, jQuery, Modernizr, enquire, audiojs*/
 
 (function($) {
-   // Pagination Ajax.
+  // Pagination Ajax.
   var pagination_ajax = function () {
     var parent_views = $(this).parents('.views');
     var name = parent_views.find('input[name="name"]').val();
@@ -51,7 +51,21 @@
 
   };
 
+  function get_location_info() {
+    $.get("http://ipinfo.io", function (response) {
+      $("#ip").html("IP: " + response.ip);
+      $("#address").html("Address: " + response.city + ", " + response.region);
+      $("#city").html("City: " + response.city);
+      $("#region").html("Region: " + response.region);
+      $("#country").html("Country: " + response.country);
+      $("#loc").html("Location: " + response.loc);
+      $("#org").html("Org: " + response.org);
+      //$("#details").html(JSON.stringify(response, null, 4));
+    }, "jsonp");
+  }
+
   $(document).ready(function() {
+    get_location_info();
     $('.ajax-pagination .pager-item a').on('click', pagination_ajax);
   });
 
