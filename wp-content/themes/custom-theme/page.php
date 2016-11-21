@@ -44,7 +44,8 @@ echo $upload;
 
 Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig'), $context );
 
-$json_string = file_get_contents("http://api.wunderground.com/api/347baa5babbe34ef/geolookup/q/CA/San_Francisco.json");
-  $parsed_json = json_decode($json_string);
-  $location = $parsed_json->{'location'}->{'city'};
-  echo $location;
+$json_string = file_get_contents("http://api.wunderground.com/api/347baa5babbe34ef/geolookup/q/CA/Hanoi.json");
+$parsed_json = json_decode($json_string);
+print_r($parsed_json);
+$location = $parsed_json->{'location'}->{'city'};
+//echo $location;
