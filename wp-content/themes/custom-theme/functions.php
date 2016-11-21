@@ -15,7 +15,7 @@ require_once('init/options/option.php');
 
 if(!is_admin()) {
   // Add scripts
-  function cat_libs_scripts() {
+  function ct_libs_scripts() {
     wp_register_script('lib-slick', get_stylesheet_directory_uri() . '/dist/js/libs/slick.js', array('jquery'), FALSE, '0.7.0', TRUE);
     wp_enqueue_script('lib-slick');
 
@@ -29,19 +29,19 @@ if(!is_admin()) {
     wp_localize_script( 'script', 'paginationAjax', array( 'ajaxurl' => admin_url('admin-ajax.php' )));
     wp_enqueue_script('script');
   }
-  add_action('wp_print_scripts', 'cat_libs_scripts');
+  add_action('wp_print_scripts', 'ct_libs_scripts');
 
   // Add stylesheet
-  function cat_styles() {
+  function ct_styles() {
     $styles = get_stylesheet_directory_uri() . '/dist/css/styles.css';
     wp_register_style('theme-style', $styles, array(), '1.0', 'all');
     wp_enqueue_style('theme-style');
   }
-  add_action('wp_enqueue_scripts', 'cat_styles');
+  add_action('wp_enqueue_scripts', 'ct_styles');
 }
 
 // Add admin script
-function cat_admin_scripts() {
+function ct_admin_scripts() {
   wp_register_script('lib-moment', get_stylesheet_directory_uri() . '/dist/js/admin-libs/moment.js', array('jquery'), '2.13.0');
   wp_enqueue_script('lib-moment');
 
@@ -51,14 +51,14 @@ function cat_admin_scripts() {
   wp_register_script('admin-script', get_stylesheet_directory_uri() . '/dist/js/admin-script.js', array('jquery'), '1.0.0');
   wp_enqueue_script('admin-script');
 }
-add_action('admin_init', 'cat_admin_scripts');
+add_action('admin_init', 'ct_admin_scripts');
 
 // Add admin script
-function cat_admin_styles() {
+function ct_admin_styles() {
   wp_register_style('admin-style', get_stylesheet_directory_uri() . '/dist/css/admin.css', array(), '1.0', 'all');
   wp_enqueue_style('admin-style');
 }
-add_action('admin_init', 'cat_admin_styles');
+add_action('admin_init', 'ct_admin_styles');
 
 /* Add custom post type
 function cat_create_custom_post_types() {
