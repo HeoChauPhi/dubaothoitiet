@@ -44,8 +44,27 @@ echo $upload;
 
 Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig'), $context );
 
-$json_string = file_get_contents("http://api.wunderground.com/api/347baa5babbe34ef/geolookup/q/CA/Hanoi.json");
+$localtion_json = file_get_contents("http://ipinfo.io/");
+$parsed_localtion = json_decode($localtion_json);
+//print_r($parsed_localtion);
+/*$pattern = "#\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b#";
+preg_match($pattern, $str, $matches);
+$ip = $matches[0];
+$query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));*/
+$localtion = str_replace(" ", "-", $parsed_localtion->region);
+
+$json_string = file_get_contents("http://api.openweathermap.org/data/2.5/forecast/city?q=".$localtion."&APPID=87ad1525fd11092f6073bc28b6397d7c");
 $parsed_json = json_decode($json_string);
 print_r($parsed_json);
-$location = $parsed_json->{'location'}->{'city'};
-//echo $location;
+
+
+/*if($query && $query['status'] == 'success')
+{
+    echo 'Your City is ' . $query['city'];
+    echo '<br />';
+    echo 'Your State is ' . $query['region'];
+    echo '<br />';
+    echo 'Your Zipcode is ' . $query['zip'];
+    echo '<br />';
+    echo 'Your Coordinates are ' . $query['lat'] . ', ' . $query['lon'];
+}*/

@@ -65,7 +65,7 @@
   }
 
   $(document).ready(function() {
-    get_location_info();
+    //get_location_info();
     $('.ajax-pagination .pager-item a').on('click', pagination_ajax);
   });
 
